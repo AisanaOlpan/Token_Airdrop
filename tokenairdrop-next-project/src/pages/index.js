@@ -110,8 +110,10 @@ export default function Home() {
           <SpinnerButton
             onClick={handleClick}
             loading={isLoading}
-            children={walletConnected ? "Send" : "Connect wallet"}
-          ></SpinnerButton>
+            // children={<>{walletConnected ? "Send" : "Connect wallet"}</>}
+          >
+            {walletConnected ? "Send" : "Connect wallet"}
+          </SpinnerButton>
         </div>
       </main>
 
